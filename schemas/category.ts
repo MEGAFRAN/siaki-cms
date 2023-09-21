@@ -29,5 +29,11 @@ export default defineType({
       title: "MetaDescription",
       type: "text",
     }),
+    defineField({
+      name: 'companies',
+      type: 'array',
+      title: 'Companies',
+      of: [{type: 'reference', to: {type: 'company'}}]
+    })
   ],
 })
