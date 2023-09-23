@@ -38,7 +38,10 @@ export default defineType({
       name: 'companies',
       type: 'array',
       title: 'Companies',
-      of: [{type: 'reference', to: {type: 'company'}}]
+      of: [{
+        type: 'reference', 
+        to: {type: 'company'}
+      }]
     })
   ],
 })

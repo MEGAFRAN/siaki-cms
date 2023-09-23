@@ -14,6 +14,7 @@ export default defineType({
       name: "title",
       title: "Title",
       type: "string",
+      // validation: Rule => Rule.required()
     }),
     defineField({
       name: "slug",
@@ -40,6 +41,18 @@ export default defineType({
       title: "Services",
       type: "array",
       of: [{ type: "string" }],
+    }),
+    defineField({
+      name: "reviews",
+      title: "Reviews",
+      type: "array",
+      of: [{ 
+        type: "object",
+        fields: [
+          { name: "stars", type: "number", title: "Stars" },
+          { name: "comment", type: "text", title: "Comment" }
+        ] 
+      }],
     }),
     defineField({
       name: "schedule",
